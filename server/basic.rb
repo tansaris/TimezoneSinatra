@@ -37,7 +37,9 @@ def am_pm(input_time)
 	min = input_time.split(':')[1]
   	meridian = (hour >= 12) ? 'PM' : 'AM'
  	hour = case hour
-      	when 12 .. 23
+ 		when 0
+ 			12
+      	when 13 .. 23
         	hour - 12
        	else
        	   	hour
